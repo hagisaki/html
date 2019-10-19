@@ -40,10 +40,20 @@
         }
       );
     }
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title></title>
+	<meta charset="utf-8" />
+  <script type="text/javascript">
+    function proc() {
+      elem = document.getElementById("output");
+      elem.innerText = "JavaScriptが実行されました。";
+    }
   </script>
 </head>
-<body>
-  <h1>位置情報取得サンプル</h1>
-  <button onclick="getPosition();">位置情報を取得する</button>
+<body onload="proc();">
+  <div id="output"></div>
 </body>
 </html>
