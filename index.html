@@ -1,48 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>位置情報取得サンプル</title>
-
-  <script>
-    // Geolocation APIに対応している
-    if (navigator.geolocation) {
-      alert("この端末では位置情報が取得できます");
-    // Geolocation APIに対応していない
-    } else {
-      alert("この端末では位置情報が取得できません");
-    }
-    // 現在地取得処理
-    function getPosition() {
-      // 現在地を取得
-      navigator.geolocation.getCurrentPosition(
-        // 取得成功した場合
-        function(position) {
-            alert("緯度:"+position.coords.latitude+",経度"+position.coords.longitude);
-        },
-        // 取得失敗した場合
-        function(error) {
-          switch(error.code) {
-            case 1: //PERMISSION_DENIED
-              alert("位置情報の利用が許可されていません");
-              break;
-            case 2: //POSITION_UNAVAILABLE
-              alert("現在位置が取得できませんでした");
-              break;
-            case 3: //TIMEOUT
-              alert("タイムアウトになりました");
-              break;
-            default:
-              alert("その他のエラー(エラーコード:"+error.code+")");
-              break;
-          }
-        }
-      );
-    }
-  </script>
-</head>
-<body>
-  <h1>位置情報取得サンプル</h1>
-  <button onclick="getPosition();">位置情報を取得する</button>
-</body>
-</html>
+<body id=D onKeyDown=K=event.keyCode-38><script>function G(x){Z[x]==c&&(Z[x]=q?
+(P+=k++,0):-c,G(x+1),G(x+8),G(x-1),G(x-8),v++)}function Y(){i=I=96;if(e=++e%4)
+for(K?K+6?Z[a=h+K]|Z[a+B]?0:h=a:Z[h+(E=B%8?B*8:-B/8)]?0:B=E:0;K=k=i--;X[h]=2+t%
+5|0,X[h+B]=2+t/5|0,f=Z[8+h]+Z[8+h+B])X[i]=Z[i];else if(h+=8,r||f){r?r=0:X=[Z=X]
+for(Z[-5]=0;i--;B=8)Z[j=i-8]*!Z[i]&&(Z[i]=Z[j],Z[r=j]=0);if(!r)for(t=Math.
+random(h=3)*25;I--;q=v=0)if(c=Z[I],c>1)G(I),c=-c,r+=q=v>3,G(I);e=r?3:0}for(i=S=
+"";i<96;S+=i%8?"＿■●★▲＊□".charAt(c):"■<br>")c=X[i]|(Z[i]|=++i%8<2|i>88);
+D.innerHTML=S+P;Z[3]*!r||setTimeout(Y,99-P)}e=3;Y(f=X=Z=[r=h=K=P=0])</script>
